@@ -130,13 +130,14 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
+    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'eJiTI3IzUXxUEoRJT')
+    .then((result) => {
+      setOpen(true);
+      form.current.reset();
+    })
+    .catch((error) => {
+      console.error('Error sending form:', error);
+    });
   }
 
 
